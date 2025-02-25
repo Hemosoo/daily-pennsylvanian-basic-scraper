@@ -1,6 +1,6 @@
 ##Modifications
 1. Targeting the Correct Sports Section
-The original scraper extracted the main homepage headline. To specifically fetch the sports headline, I identified the sports section by searching for <h3 class="frontpage-section"> containing the text "Sports".
+The original scraper extracted the main homepage headline. To specifically fetch the sports headline, I identified the sports section by searching for \<h3 class="frontpage-section"> containing the text "Sports".
 I then selected the first article under this section by locating the div with class "article-summary", which contains the article’s title and link.
 2. Extracting the Headline from the Correct Element
 Instead of using soup.find("a", class_="frontpage-link medium-link font-regular"), I modified the script to:
