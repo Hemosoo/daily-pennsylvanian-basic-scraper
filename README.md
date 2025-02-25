@@ -1,3 +1,13 @@
+##Modifications
+1. Targeting the Correct Sports Section
+The original scraper extracted the main homepage headline. To specifically fetch the sports headline, I identified the sports section by searching for <h3 class="frontpage-section"> containing the text "Sports".
+I then selected the first article under this section by locating the div with class "article-summary", which contains the article’s title and link.
+2. Extracting the Headline from the Correct Element
+Instead of using soup.find("a", class_="frontpage-link medium-link font-regular"), I modified the script to:
+Locate the sports section header.
+Find the first article summary div under it.
+Extract the headline text from the <a> tag inside this div.
+
 # Basic Git Scraper Template
 
 This template provides a starting point for **git scraping**—the technique of scraping data from websites and automatically committing it to a Git repository using workflows, [coined by Simon Willison](https://simonwillison.net/2020/Oct/9/git-scraping/).
